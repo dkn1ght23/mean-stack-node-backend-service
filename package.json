@@ -1,0 +1,26 @@
+{
+  "name": "mean-stack-node-backend-service",
+  "version": "1.0.0",
+  "description": "node js based backend service with db intergretation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "server-nr": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkn1ght23/mean-stack-node-backend-service.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "mean-stack"
+  ],
+  "author": "Mujammal Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkn1ght23/mean-stack-node-backend-service/issues"
+  },
+  "homepage": "https://github.com/dkn1ght23/mean-stack-node-backend-service#readme"
+}
