@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/dkn1ght23/mean-stack-node-backend-service/issues"
   },
-  "homepage": "https://github.com/dkn1ght23/mean-stack-node-backend-service#readme"
+  "homepage": "https://github.com/dkn1ght23/mean-stack-node-backend-service#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
