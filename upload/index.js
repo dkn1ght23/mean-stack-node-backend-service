@@ -1,5 +1,7 @@
 let fileUpload = (app) => {
-    app.get('/upload', (req,res) => {
+    app.post('/upload', (req,res) => {
+        //console.log(req.params);
+        console.log(req.body);
         res.send('Upload complete');
     })
 }
