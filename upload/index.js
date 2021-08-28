@@ -1,6 +1,7 @@
 const multer = require('multer');
 const fs = require('fs');
 const upload = multer({dest: 'files/'}); //File stored location
+const express = require('express');
 
 let fileUpload = (app) => {
 
@@ -12,9 +13,12 @@ let fileUpload = (app) => {
         let originalName = req.file.originalname;
         let filename = req.file.filename;
         let currentFilePath = req.file.path;
-        let dest = req.file.destination;
+        //let dest = req.file.destination;
 
-        fs.rename(currentFilePath, dest + filename + originalName, (error) => {
+        //NEW PATH IN A LINE
+        let newFilePath = `files/${originalName}`;
+
+        fs.rename(currentFilePath, newFilePath, (error) => {
             if(error){
                 res.send('file upload fail');
             }
@@ -25,8 +29,14 @@ let fileUpload = (app) => {
 
     })
 }
-let Upload = (app) => {
-    fileUpload(app);
+
+let filePreview = (app) => {
+    app.use('/images', express.static('files/'));
 }
 
-module.exports = fileUpload;
+let Upload = (app) => {
+    fileUpload(app);
+    filePreview(app);
+}
+
+module.exports = Upload;
